@@ -1,9 +1,10 @@
 #include "../libft/libft.h"
 
+
 int main()
 
 {
-    char src[] = "cccc";
-    char dst[] = "aaaaaaa";
-    printf("%s",(const char *)ft_memmove(dst,src,4));
+    char src[] = "123456789";
+    char dst[] = "abcdefg";
+    printf("%s",(char *)ft_memmove(dst,src,2));
 }
