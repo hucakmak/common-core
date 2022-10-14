@@ -17,7 +17,6 @@ void *ft_memmove(void *dst, const void *src, size_t len)
                 a[len] = b[len];
                 len--;
             }
-            printf("src dstten büyük");
             return (dst);
         }
     else {
@@ -26,7 +25,6 @@ void *ft_memmove(void *dst, const void *src, size_t len)
             a[i] = b[i];
             i++;
         }
-        printf("src destten kücük");
         return (dst);
     }
 }
