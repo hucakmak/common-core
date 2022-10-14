@@ -1,14 +1,23 @@
 #include "stdio.h"
-#include "string.h"
 
-// size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
-int main()
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-    char a[] = "aaaaa";
-    const char b[] = "bbbb";
-    printf("a önceki hali %s\n\n",a);
-    printf("b önceki hali %s\n\n",b);
-    printf("%zu\n\n",strlcpy(a,b,3));
-    printf("a sonraki hali %s\n\n",a);
-    printf("b sonraki hali %s",b);
+    char *dst2;
+    const char *src2;
+
+    dst2 = dst;
+    src2 = src;
+    size_t i = 0;
+
+    if (dstsize != 0)
+    {
+        while (i < dstsize - 1 && dst2 != 0)
+        {
+            dst2[i] = src2[i];
+            i++;
+        }
+        dst2[i] = 0;
+        return (size_t)(dst);
+    }
+    return (size_t)(dst);
 }
