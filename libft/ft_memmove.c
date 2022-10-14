@@ -12,9 +12,9 @@ void *ft_memmove(void *dst, const void *src, size_t len)
     if (src < dst)
 
         {
-            while (len > -1)
+            while (len > 0)
             {
-                a[len] = b[len];
+                a[len - 1] = b[len - 1];
                 len--;
             }
             return (dst);
@@ -22,7 +22,7 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 
     else
         {
-            while (i < len && a[i] != 0)
+            while (i < len)
             {
                 a[i] = b[i];
                 i++;
