@@ -1,12 +1,14 @@
-SRC		=	ft_isalnum.c ft_isalpha.c
-MAIN	=	main.c
+SRC		=	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memcpy.c ft_memmove.c \
+			ft_memset.c ft_strchr.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_tolower.c ft_toupper.c ft_strrchr.c
 
-compiler :
-			cc $(MAIN) $(SRC) -Wall -Wextra -Werror
+OBJ		= $(SRC:%.c=%.o)
 
-run	: compiler
-	./a.out
+compiler : $(OBJ)
+			cc -c $(SRC) -Wall -Wextra -Werror
+			ar -rc libft.a $(OBJ)
 
-clear :
-	rm a.out
+
+clean:
+	rm *.o libft.a
+
 

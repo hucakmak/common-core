@@ -1,18 +1,17 @@
 #include "stdio.h"
 
 void ft_bzero(void *s, size_t n)
-
 {
+	size_t i;
 	char *a;
+
 	a = s;
-	size_t i = 0;
-	size_t len = 0;
-	while (a[len] != 0)
+	i = 0;
+	if (n != 0)
 	{
-		len++;
-	}
-	while (i < len && i < n)
-	{
-		a[i++] = 0;
+		while (i < n)
+		{
+			a[i++] = 0;
+		}
 	}
 }
