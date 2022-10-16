@@ -8,15 +8,14 @@ char *ft_strrchr(const char *s, int c)
 	new_c = c;
 	if (s == NULL)
 		return (NULL);
-
-	i = 0;
-	while (s[i] == new_c || s[i] != 0)
+	i = ft_strlen(s);
+	while (s[i] == new_c || s[i] != s[0])
 	{
 		if (s[i] == new_c)
 		{
 			return ((char *)(s + i));
 		}
-		i++;
+		i--;
 	}
 	return (NULL);
 }
