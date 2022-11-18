@@ -42,12 +42,3 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-
-int main()
-{
-
-	printf("benim sonuç: %p\n",ft_strnstr("talha","x",30));
-	printf("sistem sonuç: %p\n",strnstr("talha","x",30));
-
-}
