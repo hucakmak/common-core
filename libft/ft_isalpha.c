@@ -5,17 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 22:42:16 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/11/18 22:42:21 by hucakmak         ###   ########.fr       */
+/*   Created: 2022/12/06 17:11:18 by hucakmak          #+#    #+#             */
+/*   Updated: 2022/12/06 17:12:20 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_isalpha(int c)
-
+int	ft_isalpha(int c)
 {
-    if((65 <= c && c <= 90) || (97 <= c && c <= 122))
-        return 1;
-    else
-        return 0;
+	if ((65 <= c && c <= 90) || (97 <= c && c <= 122))
+		return (1);
+	else
+		return (0);
 }

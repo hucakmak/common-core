@@ -5,23 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 22:44:12 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/11/18 22:44:14 by hucakmak         ###   ########.fr       */
+/*   Created: 2022/12/06 17:38:33 by hucakmak          #+#    #+#             */
+/*   Updated: 2022/12/06 17:39:59 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 
 {
-    size_t i = 0;
-    unsigned char *a;
-    a = b;
-    while(i < len)
-    {
-        a[i] = c;
-        i++;
-    }
-    return (b);
+	size_t			i;
+	unsigned char	*a;
+
+	a = b;
+	i = 0;
+	while (i < len)
+	{
+		a[i] = c;
+		i++;
+	}
+	return (b);
 }

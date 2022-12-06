@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 22:41:43 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/11/18 22:41:46 by hucakmak         ###   ########.fr       */
+/*   Created: 2022/12/06 17:05:09 by hucakmak          #+#    #+#             */
+/*   Updated: 2022/12/06 18:51:57 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
-	char *a;
+	size_t	i;
+	char	*a;
 
 	a = s;
 	i = 0;

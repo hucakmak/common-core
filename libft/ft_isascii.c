@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 22:42:30 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/11/18 22:42:32 by hucakmak         ###   ########.fr       */
+/*   Created: 2022/12/06 17:12:49 by hucakmak          #+#    #+#             */
+/*   Updated: 2022/12/06 17:13:25 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if(0 <= c && c <= 127)
-        return (1);
-    else
-        return (0);
+	if (0 <= c && c <= 127)
+		return (1);
+	else
+		return (0);
 }

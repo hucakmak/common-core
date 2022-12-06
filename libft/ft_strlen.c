@@ -5,20 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 22:44:48 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/11/18 22:44:50 by hucakmak         ###   ########.fr       */
+/*   Created: 2022/12/06 18:00:48 by hucakmak          #+#    #+#             */
+/*   Updated: 2022/12/06 18:01:24 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t i;
-    i = 0;
-    while (s[i] != 0)
-    {
-        i++;
-    }
-    return (i);
+	size_t	i;
+
+	i = 0;
+	while (s[i] != 0)
+		i++;
+	return (i);
 }

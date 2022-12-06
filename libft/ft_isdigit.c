@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 22:42:42 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/11/18 22:42:44 by hucakmak         ###   ########.fr       */
+/*   Created: 2022/12/06 17:17:06 by hucakmak          #+#    #+#             */
+/*   Updated: 2022/12/06 17:17:37 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if(48 <= c && c <=57)
-        return (1);
-    else
-        return (0);
+	if (48 <= c && c <= 57)
+		return (1);
+	else
+		return (0);
 }
