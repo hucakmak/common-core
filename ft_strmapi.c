@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 18:22:21 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/06 18:26:05 by hucakmak         ###   ########.fr       */
+/*   Created: 2022/12/07 12:18:53 by hucakmak          #+#    #+#             */
+/*   Updated: 2022/12/07 12:25:37 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*yeni;
-	size_t	i;
-	size_t	t;
+	unsigned int	i;
+	unsigned int	n;
+	char			*new;
 
-	i = 0;
-	t = ft_strlen(s) - start + 1;
-	if (ft_strlen(s) < start)
+	n = 0;
+	i = ft_strlen(s);
+	new = (char *)malloc(i + 1);
+	if (!new)
+		return (0);
+	while (n < i)
 	{
-		yeni = ft_calloc(1, 1);
-		return (yeni);
+		new[n] = f(n, s[n]);
+		n++;
 	}
-	if (t < len)
-		yeni = ft_calloc(sizeof(char), t);
-	else
-		yeni = ft_calloc(sizeof(char), len);
-	while (s[start] != 0 && i < len)
-		yeni[i++] = s[start++];
-	yeni[i] = 0;
-	return (yeni);
+	new[n] = 0;
+	return (new);
 }
