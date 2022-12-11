@@ -6,14 +6,14 @@
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 18:04:18 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/06 18:52:35 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/12 02:03:46 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "string.h"
 
-char	kontrol(const char *a, const char *b)
+char	check(const char *a, const char *b)
 {
 	size_t	i;
 	size_t	len;
@@ -44,7 +44,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		while (haystack[i] == needle[0] && haystack[i] != 0)
 		{
-			if (kontrol((haystack + i), needle) == 1)
+			if (check((haystack + i), needle) == 1)
 				return ((char *)(haystack + i));
 			i++;
 		}

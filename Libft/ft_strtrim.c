@@ -6,11 +6,10 @@
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 18:13:32 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/06 18:15:49 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/12 02:07:30 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 size_t	str_in_char(char const *set, char c)

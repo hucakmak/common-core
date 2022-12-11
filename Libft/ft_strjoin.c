@@ -6,7 +6,7 @@
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 17:45:53 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/06 18:55:27 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/12 02:06:46 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*yeni;
+	char	*new;
 	int		a;
 	int		i;
 	int		c;
@@ -25,15 +25,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	a = 0;
 	a += ft_strlen(s1);
 	a += ft_strlen(s2) + 1;
-	yeni = ft_calloc(sizeof(char), a);
+	new = ft_calloc(sizeof(char), a);
 	while (s1[i] != 0)
 	{
-		yeni[i] = s1[i];
+		new[i] = s1[i];
 		i++;
 	}
 	c = 0;
 	while (s2[c] != 0)
-		yeni[i++] = s2[c++];
-	yeni[i] = 0;
-	return (yeni);
+		new[i++] = s2[c++];
+	new[i] = 0;
+	return (new);
 }

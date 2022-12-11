@@ -6,93 +6,61 @@
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 17:40:32 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/06 17:40:45 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/12 00:21:35 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include"libft.h"
 
-int	uzunluk_bul(char const *str, char c)
+size_t	ft_wordlen(char const *s, char c)
 {
-	int	i;
-	int	a;
+	size_t	r;
 
-	i = 0;
-	a = 0;
-	while (str[i++] != c && str[i] != 0)
-		a++;
-	return (a + 1);
+	r = 0;
+	while (s[r] != '\0' && s[r] != c)
+		r++;
+	return (r);
 }
 
-int	konum_bul(char const *str, char c)
+size_t	ft_wordcount(char const *s, char c)
 {
-	int	state;
-	int	i;
+	size_t	r;
 
-	state = 0;
-	i = 0;
-	while (str[i])
+	r = 0;
+	while (*s != '\0')
 	{
-		if (str[i] == c)
-			state = 0;
-		else if (state == 0)
-		{
-			state = 1;
-			return (i);
-		}
-		i++;
+		if (*s != c && (s[1] == '\0' || s[1] == c))
+			r++;
+		s++;
 	}
-	return (0);
+	return (r);
 }
-
-int	countwords(char const *str, char c)
-{
-	int	state;
-	int	wc;
-	int	i;
-
-	state = 0;
-	wc = 0;
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			state = 0;
-		else if (state == 0)
-		{
-			state = 1;
-			wc++;
-		}
-		i++;
-	}
-	return (wc);
-}
-// 0 = knm, 1 = t
 
 char	**ft_split(char const *s, char c)
 {
-	char	**arr_2d;
-	int		t[2];
-	int		cw;
-	int		j;
-	int		i;
+	char	**arr;
+	size_t	i;
+	size_t	len;
+	size_t	index;
 
-	cw = countwords(s, c);
-	arr_2d = malloc(cw * sizeof(char *) + 1);
+	if (!s)
+		return (NULL);
+	len = ft_wordcount(s, c);
+	arr = (char **)malloc(sizeof(char *) * len + 1);
+	if (arr == NULL)
+		return (NULL);
 	i = 0;
-	j = 0;
-	t[0] = 0;
-	while (i < cw)
+	while (i < len)
 	{
-		t[1] = 0;
-		j += t[0];
-		t[0] = konum_bul (&s[j], c);
-		arr_2d[i] = malloc (uzunluk_bul(&s[j], c));
-		while (s[t[0] + j] != c && s[t[0] + j] != 0)
-			arr_2d[i][t[1]++] = s[t[0]++ + j];
-		arr_2d[i++][t[0]] = 0;
+		while (*s == c && *s != '\0')
+			s++;
+		arr[i] = (char *)malloc(sizeof(char) * ft_wordlen(s, c) + 1);
+		index = 0;
+		while (*s != c && *s != '\0')
+			arr[i][index++] = *s++;
+		arr[i][index] = '\0';
+		i++;
 	}
-	arr_2d[cw] = 0;
-	return (arr_2d);
+	arr[i] = NULL;
+	return (arr);
 }

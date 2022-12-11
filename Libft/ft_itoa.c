@@ -6,13 +6,13 @@
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 16:43:03 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/11 17:01:39 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/11 22:17:11 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	basamak(int n)
+char	size(int n)
 {
 	int	a;
 
@@ -27,32 +27,38 @@ char	basamak(int n)
 	return (a);
 }
 
+char	number(char *nbr, int n, int i, int a)
+{
+	while (i < a)
+	{
+		if (n == -2147483648)
+		{
+			nbr[a-- - 1] = '8';
+			n = n / 10;
+		}
+		else if (n < 0)
+		{
+			nbr[i++] = 45;
+			n *= -1;
+		}
+		else
+		{
+			nbr[a-- - 1] = (n % 10) + 48;
+			n = n / 10;
+		}
+	}
+	return ((char)(nbr));
+}
+
 char	*ft_itoa(int n)
 {
 	char	*nbr;
 	int		i[2];
 
-	i[2] = basamak(n);
-	i[1] = 0;
-	nbr = malloc(sizeof(char) * (i[2] + 1));
-	nbr[i[2]] = 0;
-	while (i[1] < i[2])
-	{
-		if (n == -2147483648)
-		{
-			nbr[i[2]-- - 1] = '8';
-			n = n / 10;
-		}
-		else if (n < 0)
-		{
-			nbr[i[1]++] = 45;
-			n *= -1;
-		}
-		if (n >= 0)
-		{
-			nbr[i[2]-- - 1] = n % 10 + 48;
-			n = n / 10;
-		}
-	}
+	i[1] = size(n);
+	i[0] = 0;
+	nbr = (char *)malloc(sizeof(char) * (i[1] + 1));
+	nbr[i[1]] = 0;
+	number(nbr, n, i[0], i[1]);
 	return (nbr);
 }
