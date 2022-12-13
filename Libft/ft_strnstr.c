@@ -11,14 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "string.h"
 
 char	check(const char *a, const char *b)
 {
 	size_t	i;
 	size_t	len;
 
-	len = strlen(b);
+	len = ft_strlen(b);
 	i = 0;
 	while (a[i] == b[i])
 	{
@@ -32,15 +31,13 @@ char	check(const char *a, const char *b)
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	char	*empty;
 
-	empty = (char *)"";
 	i = 0;
-	if (needle == empty)
+	if (!*needle)
 		return ((char *)(haystack));
 	if (len == 0)
 		return (0);
-	while (haystack[i] != 0 && i <= (len - strlen(needle)))
+	while (haystack[i] != 0 && i <= (len - ft_strlen(needle)))
 	{
 		while (haystack[i] == needle[0] && haystack[i] != 0)
 		{

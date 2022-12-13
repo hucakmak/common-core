@@ -6,7 +6,7 @@
 /*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 16:43:03 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/11 22:17:11 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/13 23:11:04 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ char	*ft_itoa(int n)
 	i[1] = size(n);
 	i[0] = 0;
 	nbr = (char *)malloc(sizeof(char) * (i[1] + 1));
+	if (!nbr)
+		return (0);
 	nbr[i[1]] = 0;
 	number(nbr, n, i[0], i[1]);
 	return (nbr);

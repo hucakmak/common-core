@@ -18,8 +18,6 @@ char	*ft_strchr(const char *s, int c)
 	char	new_c;
 
 	new_c = c;
-	if (s == NULL)
-		return (NULL);
 	i = 0;
 	while (s[i] == new_c || s[i] != 0)
 	{
