@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hucakmak <hucakmak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 18:32:53 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/12 02:13:28 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/17 23:52:20 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

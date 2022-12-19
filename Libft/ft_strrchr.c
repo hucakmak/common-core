@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hucakmak <hucakmak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 18:12:09 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/13 22:37:29 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/18 13:01:36 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	new_c = c;
 	i = ft_strlen(s);
-	while (s[i] == new_c || s[i] != s[0])
+	while (i >= 0)
 	{
 		if (s[i] == new_c)
 			return ((char *)(s + i));

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hucakmak <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hucakmak <hucakmak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 17:40:32 by hucakmak          #+#    #+#             */
-/*   Updated: 2022/12/12 00:21:35 by hucakmak         ###   ########.fr       */
+/*   Updated: 2022/12/18 00:01:10 by hucakmak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 size_t	ft_wordlen(char const *s, char c)
 {
